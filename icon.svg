@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="vanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f3f4f6"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)"/>
+  <rect x="6" y="6" width="500" height="500" rx="104" fill="none" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="4"/>
+
+  <!-- Sun in top right corner -->
+  <circle cx="390" cy="110" r="54" fill="url(#sunGrad)" filter="drop-shadow(0 0 20px rgba(245,158,11,0.6))"/>
+  <!-- Sun rays -->
+  <g stroke="#fbbf24" stroke-width="6" stroke-linecap="round" opacity="0.75">
+    <line x1="390" y1="35" x2="390" y2="15"/>
+    <line x1="465" y1="110" x2="485" y2="110"/>
+    <line x1="443" y1="57" x2="458" y2="42"/>
+    <line x1="443" y1="163" x2="458" y2="178"/>
+    <line x1="337" y1="57" x2="322" y2="42"/>
+  </g>
+
+  <!-- Camper Van Body -->
+  <g filter="drop-shadow(0 16px 24px rgba(0,0,0,0.6))">
+    <!-- Main Body -->
+    <path d="M 80 320 
+             L 80 230 
+             C 80 200 95 180 130 180 
+             L 330 180 
+             C 360 180 395 210 420 250 
+             L 440 280 
+             C 445 290 445 320 445 320 
+             Z" fill="url(#vanGrad)"/>
+    <!-- Bottom Chassis / Skirt -->
+    <rect x="70" y="320" width="380" height="30" rx="6" fill="#334155"/>
+
+    <!-- Solar Panel on Roof -->
+    <g transform="translate(140, 150)">
+      <rect x="0" y="0" width="180" height="20" rx="4" fill="#64748b"/>
+      <rect x="4" y="2" width="172" height="16" rx="3" fill="url(#panelGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+      <!-- Grid lines on panel -->
+      <line x1="32" y1="2" x2="32" y2="18" stroke="#bae6fd" stroke-width="1.5" opacity="0.6"/>
+      <line x1="60" y1="2" x2="60" y2="18" stroke="#bae6fd" stroke-width="1.5" opacity="0.6"/>
+      <line x1="88" y1="2" x2="88" y2="18" stroke="#bae6fd" stroke-width="1.5" opacity="0.6"/>
+      <line x1="116" y1="2" x2="116" y2="18" stroke="#bae6fd" stroke-width="1.5" opacity="0.6"/>
+      <line x1="144" y1="2" x2="144" y2="18" stroke="#bae6fd" stroke-width="1.5" opacity="0.6"/>
+    </g>
+
+    <!-- Windshield -->
+    <path d="M 345 200 L 400 255 L 345 255 Z" fill="#0f172a" rx="4"/>
+    <!-- Side Windows -->
+    <rect x="235" y="200" width="85" height="55" rx="8" fill="#1e293b"/>
+    <rect x="135" y="200" width="85" height="55" rx="8" fill="#1e293b"/>
+
+    <!-- Headlight -->
+    <path d="M 435 285 L 445 285 L 442 305 L 432 305 Z" fill="#fbbf24"/>
+
+    <!-- Wheels -->
+    <!-- Rear Wheel -->
+    <circle cx="150" cy="350" r="42" fill="#0f172a"/>
+    <circle cx="150" cy="350" r="26" fill="#64748b"/>
+    <circle cx="150" cy="350" r="10" fill="#cbd5e1"/>
+
+    <!-- Front Wheel -->
+    <circle cx="370" cy="350" r="42" fill="#0f172a"/>
+    <circle cx="370" cy="350" r="26" fill="#64748b"/>
+    <circle cx="370" cy="350" r="10" fill="#cbd5e1"/>
+  </g>
+
+  <!-- Energy / Battery Lightning Bolt Badge -->
+  <g transform="translate(230, 290)">
+    <circle cx="26" cy="26" r="32" fill="#030712" stroke="#f59e0b" stroke-width="3"/>
+    <path d="M 30 6 L 14 26 L 26 26 L 22 46 L 38 24 L 26 24 Z" fill="url(#sunGrad)"/>
+  </g>
+</svg>

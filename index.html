@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <!-- Google tag (gtag.js) GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BNDBQP0W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2BNDBQP0W7');
+  </script>
+
+  <!-- Google AdSense Account Verification -->
+  <meta name="google-adsense-account" content="ca-pub-3381238987477190">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3381238987477190" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Solar Camper y 12V | Batería Litio, Paneles y Consumo</title>
+  <meta name="description" content="Calculá el consumo eléctrico 12V de tu furgoneta camper o motorhome. Dimensioná la capacidad de tu batería (Litio LiFePO4 vs AGM), potencia en paneles solares y regulador MPPT.">
+  <link rel="canonical" href="https://sebiglesias.com.ar/camper-solar/">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b0f17">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Calculadora Solar Camper & Consumo 12V | Baterías y Paneles">
+  <meta property="og:description" content="Calculá tu consumo diario en Wh y Ah a 12V. Dimensioná baterías de litio, paneles solares y reguladores MPPT para tu camper o casilla rodante.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sebiglesias.com.ar/camper-solar/">
+  <meta property="og:image" content="https://sebiglesias.com.ar/camper-solar/icon.svg">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora Solar Camper & 12V">
+  <meta name="twitter:description" content="Dimensioná tu instalación eléctrica solar 12V para furgoneta camper o motorhome.">
+  <meta name="twitter:image" content="https://sebiglesias.com.ar/camper-solar/icon.svg">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora Solar Camper y Consumo 12V",
+    "url": "https://sebiglesias.com.ar/camper-solar/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "description": "Herramienta técnica para calcular el balance energético y dimensionar el banco de baterías, paneles solares y regulador MPPT en furgonetas camper y motorhomes.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuántos paneles solares necesito para una furgoneta camper?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para una camperización estándar con heladera de 12V, iluminación LED, bomba de agua y recarga de dispositivos (consumo de unos 400 a 600 Wh diarios), se recomienda instalar entre 200W y 350W en paneles solares en el techo (por ejemplo, 1 panel rígido de 350W o 2 paneles monocristalinos de 160W). Esto asegura reponer el consumo diario incluso en días nublados o en media estación."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es mejor para una camper: batería de Litio (LiFePO4) o batería AGM/Gel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Las baterías de Litio Ferro-Fosfato (LiFePO4) son ampliamente superiores a las AGM: permiten una profundidad de descarga del 80% al 90% sin degradarse (frente al 50% máximo de una AGM), pesan un 60% menos, admiten corrientes de carga ultrarrápidas y superan los 3.000 a 5.000 ciclos de vida útil frente a los 500 ciclos de una batería de plomo o AGM."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuántos Ah de batería necesito para hacer funcionar una heladera de 12V?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Una heladera camper con compresor de 12V consume en promedio entre 30 y 45 Ah diarios (dependiendo de la temperatura ambiente y el aislamiento). Para tener al menos 2 días de autonomía sin sol ni encender el motor del vehículo, se requiere un banco de batería mínimo de 100 Ah en Litio (LiFePO4) o de 150 a 200 Ah en tecnología AGM."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la diferencia entre un regulador solar PWM y uno MPPT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El regulador PWM actúa como un interruptor básico que rebaja el voltaje del panel al voltaje de la batería, perdiendo hasta un 30% de la energía generada. El regulador MPPT (Maximum Power Point Tracking) rastrea electrónicamente el punto de máxima potencia del panel solar y convierte el exceso de voltaje en amperaje de carga adicional, aprovechando hasta un 98% de la energía del panel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo se calcula el consumo en Amperes-hora (Ah) a partir de los Watts (W)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La relación se calcula mediante la Ley de Ohm: Amperes = Watts / Voltios. Por ejemplo, una lámpara de 12 Watts conectada a la red de 12V consume 1 Ampere (12W / 12V = 1A). Si funciona durante 4 horas diarias, consumirá 4 Amperes-hora (Ah) al día (o 48 Watts-hora)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué inversor de 12V a 220V necesito para una camper?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para cargar computadoras, cámaras fotográficas y pequeños electrodomésticos, un inversor de 500W a 1000W de Onda Pura es ideal por su bajo consumo en reposo. Si planeas conectar cafeteras de cápsulas, secadores de pelo o microondas, necesitarás un inversor de al menos 1500W a 2000W continuos con cableado grueso de al menos 25 a 35 mm²."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="icon.svg" alt="Calculadora Solar Camper" class="brand-icon">
+        <div>
+          <h1 class="brand-title">Calculadora Solar Camper <span class="brand-badge">12V / 24V</span></h1>
+          <a href="https://sebiglesias.com.ar" class="back-link">← sebiglesias.com.ar</a>
+        </div>
+      </div>
+      <button class="theme-toggle-btn" id="themeToggle" aria-label="Cambiar tema">☀️</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+
+      <!-- Presets Chips -->
+      <div class="presets-bar">
+        <span class="presets-label">Configuraciones típicas:</span>
+        <button class="preset-chip" data-preset="weekend">🚐 Finde Express (Kangoo / Partner)</button>
+        <button class="preset-chip" data-preset="traveler">🏕️ Viajero Estándar (Sprinter / Ducato)</button>
+        <button class="preset-chip" data-preset="nomad">💻 Nómada Digital Off-Grid (Starlink + Laptops)</button>
+      </div>
+
+      <!-- Main Calculator Grid -->
+      <div class="calc-grid">
+
+        <!-- Consumos y Configuración -->
+        <section class="card" aria-labelledby="loadsTitle">
+          <h2 class="card-title" id="loadsTitle">⚡ Consumos Eléctricos Diarios</h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px;">
+            Marca los aparatos que utilizarás y ajusta las horas promedio de encendido diario:
+          </p>
+
+          <!-- Appliances List (Sliders & Checkboxes) -->
+          <div class="appliances-list" id="appliancesList">
+            <!-- Populated dynamically by app.js -->
+          </div>
+
+          <!-- Environmental & Hardware Config -->
+          <div class="config-group">
+            <div>
+              <label class="field-label" for="selectBatteryType">Tipo de Batería Auxiliar</label>
+              <select id="selectBatteryType" class="field-select">
+                <option value="lifepo4" selected>🔋 Litio LiFePO4 (80% útil / liviana)</option>
+                <option value="agm">🔋 AGM / Gel Ciclo Profundo (50% útil)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="field-label" for="selectAutonomy">Días de Autonomía (Sin Sol)</label>
+              <select id="selectAutonomy" class="field-select">
+                <option value="1">1 Día (Carga constante)</option>
+                <option value="2" selected>2 Días (Recomendado estándar)</option>
+                <option value="3">3 Días (Climas lluviosos / invierno)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="field-label" for="selectSunHours">Horas de Sol Pico (HSP)</label>
+              <select id="selectSunHours" class="field-select">
+                <option value="3.5">3.5 HSP (Invierno / Clima nublado)</option>
+                <option value="5.0" selected>5.0 HSP (Media estación / Primavera)</option>
+                <option value="6.5">6.5 HSP (Verano pleno sol)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="field-label">Tensión del Sistema</label>
+              <input type="text" class="field-select" value="12 Voltios (Estándar Camper)" disabled style="opacity: 0.7;">
+            </div>
+          </div>
+        </section>
+
+        <!-- Resultados y Ficha Técnica -->
+        <section class="card" aria-labelledby="specsTitle">
+          <h2 class="card-title" id="specsTitle">📋 Ficha Técnica Recomendada</h2>
+
+          <!-- Hero Metrics -->
+          <div class="results-hero">
+            <div class="hero-box">
+              <div class="hero-num" id="heroDailyWh">585 Wh</div>
+              <div class="hero-desc">Consumo Diario (Wh)</div>
+            </div>
+            <div class="hero-box">
+              <div class="hero-num cyan" id="heroDailyAh">48.8 Ah</div>
+              <div class="hero-desc">Consumo Diario (Ah a 12V)</div>
+            </div>
+          </div>
+
+          <!-- Specs List -->
+          <div class="specs-list">
+            <div class="spec-item">
+              <div class="spec-left">
+                <span class="spec-icon">🔋</span>
+                <div>
+                  <div class="spec-title">Banco de Baterías</div>
+                  <div class="spec-sub" id="specBatteryDesc">Litio LiFePO4 · 2 días de autonomía</div>
+                </div>
+              </div>
+              <div class="spec-right">
+                <div class="spec-val" id="specBatteryAh">125 Ah</div>
+                <div class="spec-unit">capacidad sugerida</div>
+              </div>
+            </div>
+
+            <div class="spec-item">
+              <div class="spec-left">
+                <span class="spec-icon">☀️</span>
+                <div>
+                  <div class="spec-title">Paneles Solares en Techo</div>
+                  <div class="spec-sub" id="specSolarDesc">1 panel de 200W o 2 de 100W</div>
+                </div>
+              </div>
+              <div class="spec-right">
+                <div class="spec-val" id="specSolarWatts">200 Wp</div>
+                <div class="spec-unit">potencia mínima</div>
+              </div>
+            </div>
+
+            <div class="spec-item">
+              <div class="spec-left">
+                <span class="spec-icon">🎛️</span>
+                <div>
+                  <div class="spec-title">Regulador de Carga MPPT</div>
+                  <div class="spec-sub" id="specMpptDesc">Regulador MPPT 12V con margen de seguridad</div>
+                </div>
+              </div>
+              <div class="spec-right">
+                <div class="spec-val" id="specMpptAmps">20A</div>
+                <div class="spec-unit">amperaje regulador</div>
+              </div>
+            </div>
+
+            <div class="spec-item">
+              <div class="spec-left">
+                <span class="spec-icon">🔌</span>
+                <div>
+                  <div class="spec-title">Inversor 12V a 220V</div>
+                  <div class="spec-sub">Onda Pura (Laptop, electrodomésticos)</div>
+                </div>
+              </div>
+              <div class="spec-right">
+                <div class="spec-val" id="specInverterWatts">500 W</div>
+                <div class="spec-unit">potencia continua</div>
+              </div>
+            </div>
+
+            <div class="spec-item">
+              <div class="spec-left">
+                <span class="spec-icon">🛡️</span>
+                <div>
+                  <div class="spec-title">Cableado Principal y Fusible</div>
+                  <div class="spec-sub">Sección recomendada batería-inversor</div>
+                </div>
+              </div>
+              <div class="spec-right">
+                <div class="spec-val" style="font-size: 0.95rem;" id="specWiringGauge">16 mm² (80A)</div>
+                <div class="spec-unit">calibre cobre</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Toolbar -->
+          <div class="action-toolbar">
+            <button class="btn-primary" id="btnShareWhatsApp">
+              <span>📱</span> Compartir Ficha Técnica
+            </button>
+            <button class="btn-secondary" id="btnPrintReport" title="Imprimir informe">
+              <span>🖨️</span> Imprimir
+            </button>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- In-Page Responsive AdSense Slot -->
+      <div class="ad-slot-container">
+        <div class="ad-disclaimer">Publicidad</div>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3381238987477190"
+             data-ad-slot="9270280155"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- Static Educational & SEO Content Section -->
+      <section class="seo-section" aria-labelledby="guideTitle">
+        <h2 id="guideTitle">Guía Técnica para Diseñar la Instalación Solar 12V de tu Furgoneta Camper</h2>
+        <p>
+          Dimensionar correctamente el sistema eléctrico autónomo de una furgoneta camper, motorhome o casilla rodante es vital para evitar quedarte sin energía en medio de la naturaleza o arruinar tus baterías secundarias por sobredescarga. Esta calculadora integra las fórmulas oficiales de ingeniería fotovoltaica aislada (*off-grid*) considerando los márgenes de seguridad térmica y la degradación por montaje horizontal en techos vehiculares.
+        </p>
+
+        <h3>Tabla de Consumos Típicos en 12V para Furgonetas y Casas Rodantes</h3>
+        <p>
+          La siguiente tabla muestra la potencia promedio en Watts y el consumo en Amperes de los artefactos más habituales en una camperización:
+        </p>
+
+        <div class="seo-table-wrapper">
+          <table class="seo-table">
+            <thead>
+              <tr>
+                <th>Artefacto</th>
+                <th>Tensión</th>
+                <th>Potencia (W)</th>
+                <th>Consumo (A)</th>
+                <th>Uso Diario Típico</th>
+                <th>Energía Diaria</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Heladera 12V con compresor</strong></td>
+                <td>12V DC</td>
+                <td>45 W</td>
+                <td>3.75 A</td>
+                <td>8 hs (ciclos intermitentes)</td>
+                <td>~360 Wh (30 Ah)</td>
+              </tr>
+              <tr>
+                <td><strong>Iluminación LED interior (4 tiras)</strong></td>
+                <td>12V DC</td>
+                <td>15 W</td>
+                <td>1.25 A</td>
+                <td>4 horas</td>
+                <td>60 Wh (5 Ah)</td>
+              </tr>
+              <tr>
+                <td><strong>Bomba de agua automática Shurflo</strong></td>
+                <td>12V DC</td>
+                <td>40 W</td>
+                <td>3.33 A</td>
+                <td>20 a 30 minutos</td>
+                <td>20 Wh (1.7 Ah)</td>
+              </tr>
+              <tr>
+                <td><strong>Carga de 2 celulares (USB 5V/9V)</strong></td>
+                <td>12V DC</td>
+                <td>20 W</td>
+                <td>1.66 A</td>
+                <td>3 horas</td>
+                <td>60 Wh (5 Ah)</td>
+              </tr>
+              <tr>
+                <td><strong>Cargador de Notebook / Laptop</strong></td>
+                <td>220V AC / 12V</td>
+                <td>65 W</td>
+                <td>5.41 A</td>
+                <td>3 a 4 horas</td>
+                <td>195 Wh (16.2 Ah)</td>
+              </tr>
+              <tr>
+                <td><strong>Calefacción estacionaria diésel</strong></td>
+                <td>12V DC</td>
+                <td>25 W (arranque 100W)</td>
+                <td>2.1 A</td>
+                <td>6 a 8 horas en invierno</td>
+                <td>180 Wh (15 Ah)</td>
+              </tr>
+              <tr>
+                <td><strong>Antena Starlink Mini / Roam</strong></td>
+                <td>12V / 220V</td>
+                <td>35 W</td>
+                <td>2.9 A</td>
+                <td>4 a 6 horas</td>
+                <td>175 Wh (14.5 Ah)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Baterías de Litio LiFePO4 vs Baterías AGM / Gel: ¿Cuál elegir?</h3>
+        <p>
+          La elección de la química de la batería secundaria define el peso útil del vehículo y la durabilidad de la instalación:
+        </p>
+        <p>
+          1. <strong>Profundidad de Descarga (DOD):</strong> Una batería AGM o Gel de 100 Ah solo entrega 50 Ah útiles antes de sufrir sulfatación prematura. En cambio, una batería de <strong>Litio LiFePO4 de 100 Ah</strong> entrega entre 80 y 90 Ah útiles sin degradarse, ofreciendo casi el doble de energía real en el mismo volumen.<br>
+          2. <strong>Peso y Espacio:</strong> Una batería AGM de 100 Ah pesa aproximadamente 30 kg. Una batería de Litio LiFePO4 equivalente pesa apenas 11 a 12 kg, ahorrando más de 18 kg de carga útil en la camper.<br>
+          3. <strong>Velocidad de Carga:</strong> Las baterías de litio pueden cargarse a corrientes de hasta 0.5C (50A de entrada directa desde el alternador o panel), mientras que las baterías de plomo reducen drásticamente su velocidad de absorción por encima del 80% de carga.
+        </p>
+
+        <h3>¿Por qué instalar siempre un regulador de carga MPPT?</h3>
+        <p>
+          Los paneles solares modernos para viviendas o furgonetas operan a tensiones de entre 24V y 40V en su punto de máxima potencia ($V_{mp}$). Un regulador tradicional <strong>PWM</strong> recorta ese voltaje a 12V, disipando y desperdiciando hasta un 35% de la energía del panel. Un regulador <strong>MPPT</strong> realiza una conversión electrónica inteligente de corriente continua a continua ($DC-DC$), convirtiendo el voltaje sobrante en amperaje extra de carga para la batería.
+        </p>
+
+        <!-- Interactive FAQ Accordion -->
+        <h3>Preguntas Frecuentes sobre Instalaciones Solares Camper</h3>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cuántos paneles solares necesito para una furgoneta camper?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Para una camperización estándar con heladera de 12V, iluminación LED, bomba de agua y recarga de dispositivos (consumo de unos 400 a 600 Wh diarios), se recomienda instalar entre <strong>200W y 350W en paneles solares</strong> en el techo (por ejemplo, 1 panel rígido de 350W o 2 paneles monocristalinos de 160W). Esto asegura reponer el consumo diario incluso en días nublados o en media estación.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Qué es mejor para una camper: Litio (LiFePO4) o AGM?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Las baterías de <strong>Litio Ferro-Fosfato (LiFePO4)</strong> son ampliamente superiores: permiten una profundidad de descarga del 80% al 90% sin degradarse (frente al 50% máximo de una AGM), pesan un 60% menos, admiten corrientes de carga ultrarrápidas y superan los 3.000 a 5.000 ciclos de vida útil frente a los 500 ciclos de una batería de plomo o AGM.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cuántos Ah de batería consume una heladera de 12V al día?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Una heladera camper con compresor de 12V consume en promedio entre <strong>30 y 45 Ah diarios</strong> (dependiendo de la temperatura ambiente y el aislamiento). Para tener al menos 2 días de autonomía sin sol ni encender el motor del vehículo, se requiere un banco de batería mínimo de 100 Ah en Litio (LiFePO4) o de 150 a 200 Ah en tecnología AGM.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cuál es la diferencia entre un regulador solar PWM y uno MPPT?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              El regulador PWM actúa como un interruptor básico que rebaja el voltaje del panel al voltaje de la batería, perdiendo hasta un 30% de la energía generada. El regulador MPPT (Maximum Power Point Tracking) rastrea electrónicamente el punto de máxima potencia del panel solar y convierte el exceso de voltaje en amperaje de carga adicional, aprovechando hasta un 98% de la energía del panel.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cómo calcular el consumo en Amperes-hora (Ah) a partir de los Watts?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              La relación se calcula mediante la Ley de Ohm: <strong>Amperes = Watts / Voltios</strong>. Por ejemplo, una lámpara de 12 Watts conectada a la red de 12V consume 1 Ampere (12W / 12V = 1A). Si funciona durante 4 horas diarias, consumirá 4 Amperes-hora (Ah) al día (o 48 Watts-hora).
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Qué inversor de 12V a 220V necesito para una camper?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Para cargar computadoras, cámaras fotográficas y pequeños electrodomésticos, un inversor de <strong>500W a 1000W de Onda Pura</strong> es ideal por su bajo consumo en reposo. Si planeas conectar cafeteras de cápsulas, secadores de pelo o microondas, necesitarás un inversor de al menos 1500W a 2000W continuos con cableado grueso de al menos 25 a 35 mm².
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Microapps Cluster -->
+        <div class="related-cluster">
+          <div class="related-title">
+            <span>🧭</span> Otras herramientas para tu viaje y hogar:
+          </div>
+          <div class="related-links-grid">
+            <a href="https://sebiglesias.com.ar/durlock/" class="related-app-card">
+              <span>🏗️</span>
+              <div>
+                <strong>Calculadora Durlock</strong>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Tabiques y cielorrasos</div>
+              </div>
+            </a>
+            <a href="https://sebiglesias.com.ar/consumo-electrico/" class="related-app-card">
+              <span>⚡</span>
+              <div>
+                <strong>Consumo Eléctrico</strong>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Tarifas y kWh hogar</div>
+              </div>
+            </a>
+            <a href="https://sebiglesias.com.ar/asadin/" class="related-app-card">
+              <span>🥩</span>
+              <div>
+                <strong>Calculadora Asadín</strong>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Asado y carne por persona</div>
+              </div>
+            </a>
+            <a href="https://sebiglesias.com.ar/materiales/" class="related-app-card">
+              <span>🧱</span>
+              <div>
+                <strong>Materiales de Construcción</strong>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Ladrillos, hormigón y pintura</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Sticky Mobile Bar -->
+  <div class="sticky-mobile-bar">
+    <div class="sticky-metric">
+      <span class="sticky-label">Consumo Diario</span>
+      <span class="sticky-val" id="stickyDailyAh">48.8 Ah/día</span>
+    </div>
+    <div class="sticky-metric">
+      <span class="sticky-label">Batería Sugerida</span>
+      <span class="sticky-val" id="stickyBatteryAh">125 Ah</span>
+    </div>
+    <button class="sticky-btn" id="stickyBtnShare">Compartir</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>
+        Calculadora Solar Camper & 12V · Por <a href="https://sebiglesias.com.ar" target="_blank" rel="noopener noreferrer">Sebastian Iglesias</a>
+      </p>
+      <p style="margin-top: 6px; font-size: 0.8rem; color: var(--text-muted);">
+        Herramienta de estimación técnica para furgonetas camper, autocaravanas y sistemas solares aislados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

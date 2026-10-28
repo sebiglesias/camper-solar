@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sebiglesias.com.ar/camper-solar/sitemap.xml

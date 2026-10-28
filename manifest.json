@@ -1,0 +1,19 @@
+{
+  "name": "Calculadora Solar Camper & 12V",
+  "short_name": "Camper Solar",
+  "description": "Calculadora de consumo eléctrico 12V, dimensionamiento de banco de baterías (Litio vs AGM) y paneles solares para furgonetas camper y motorhomes.",
+  "start_url": "/camper-solar/",
+  "scope": "/camper-solar/",
+  "display": "standalone",
+  "background_color": "#0b0f17",
+  "theme_color": "#0b0f17",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
