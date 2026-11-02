@@ -16,9 +16,20 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora Solar Camper y 12V | Batería Litio, Paneles y Consumo</title>
-  <meta name="description" content="Calculá el consumo eléctrico 12V de tu furgoneta camper o motorhome. Dimensioná la capacidad de tu batería (Litio LiFePO4 vs AGM), potencia en paneles solares y regulador MPPT.">
+  <title>Calculadora Solar Camper y 12V | RV &amp; Vanlife LiFePO4 Battery &amp; Solar Calculator</title>
+  <meta name="description" content="Calculá el consumo eléctrico 12V de tu furgoneta camper, motorhome o RV. Dimensioná baterías Litio LiFePO4 vs AGM, paneles solares, inversor y regulador MPPT.">
   <link rel="canonical" href="https://sebiglesias.com.ar/camper-solar/">
+  <link rel="alternate" hreflang="es" href="https://sebiglesias.com.ar/camper-solar/">
+  <link rel="alternate" hreflang="en" href="https://sebiglesias.com.ar/camper-solar/?lang=en">
+  <link rel="alternate" hreflang="de" href="https://sebiglesias.com.ar/camper-solar/?lang=de">
+  <link rel="alternate" hreflang="fr" href="https://sebiglesias.com.ar/camper-solar/?lang=fr">
+  <link rel="alternate" hreflang="it" href="https://sebiglesias.com.ar/camper-solar/?lang=it">
+  <link rel="alternate" hreflang="pt" href="https://sebiglesias.com.ar/camper-solar/?lang=pt">
+  <link rel="alternate" hreflang="nl" href="https://sebiglesias.com.ar/camper-solar/?lang=nl">
+  <link rel="alternate" hreflang="sv" href="https://sebiglesias.com.ar/camper-solar/?lang=sv">
+  <link rel="alternate" hreflang="da" href="https://sebiglesias.com.ar/camper-solar/?lang=da">
+  <link rel="alternate" hreflang="pl" href="https://sebiglesias.com.ar/camper-solar/?lang=pl">
+  <link rel="alternate" hreflang="x-default" href="https://sebiglesias.com.ar/camper-solar/">
 
   <!-- PWA -->
   <link rel="manifest" href="manifest.json">
@@ -130,7 +141,21 @@
           <a href="https://sebiglesias.com.ar" class="back-link">← sebiglesias.com.ar</a>
         </div>
       </div>
-      <button class="theme-toggle-btn" id="themeToggle" aria-label="Cambiar tema">☀️</button>
+      <div style="display:flex;align-items:center;gap:8px">
+        <select id="lang-select" aria-label="Language" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);color:inherit;font-size:.78rem;padding:5px 8px;border-radius:6px;cursor:pointer">
+          <option value="es">🇪🇸 ES</option>
+          <option value="en">🇺🇸 EN</option>
+          <option value="de">🇩🇪 DE</option>
+          <option value="fr">🇫🇷 FR</option>
+          <option value="it">🇮🇹 IT</option>
+          <option value="pt">🇵🇹 PT</option>
+          <option value="nl">🇳🇱 NL</option>
+          <option value="sv">🇸🇪 SV</option>
+          <option value="da">🇩🇰 DA</option>
+          <option value="pl">🇵🇱 PL</option>
+        </select>
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Cambiar tema">☀️</button>
+      </div>
     </div>
   </header>
 
@@ -293,6 +318,34 @@
             <button class="btn-secondary" id="btnPrintReport" title="Imprimir informe">
               <span>🖨️</span> Imprimir
             </button>
+          </div>
+
+          <!-- Dynamic High-Ticket Amazon Associates Solar Hardware Recommendations -->
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1)">
+            <div style="font-size:0.74rem;text-transform:uppercase;letter-spacing:0.08em;color:#f59e0b;font-weight:700;margin-bottom:10px">
+              🛒 Hardware Solar Dimensionado en Amazon (según tu cálculo)
+            </div>
+            <div style="display:grid;grid-template-columns:1fr;gap:8px">
+              <a id="amz-battery-link" href="https://www.amazon.com/s?k=12V+100Ah+LiFePO4+lithium+battery+RV+camper+bluetooth&tag=sebiglesias-20" target="_blank" rel="sponsored nofollow noopener" style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.35);border-radius:8px;text-decoration:none;color:inherit;font-size:0.84rem">
+                <span>🔋 <strong id="amz-battery-label">Batería Litio LiFePO4 12V 100Ah–200Ah (LiTime / Renogy)</strong></span>
+                <span style="color:#f59e0b;font-weight:700;white-space:nowrap;margin-left:8px">Ver en Amazon ↗</span>
+              </a>
+              <a id="amz-solar-link" href="https://www.amazon.com/s?k=Renogy+200W+12V+monocrystalline+solar+panel+RV+kit&tag=sebiglesias-20" target="_blank" rel="sponsored nofollow noopener" style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:8px;text-decoration:none;color:inherit;font-size:0.84rem">
+                <span>☀️ <strong id="amz-solar-label">Kit Paneles Solares Monocristalinos 200W–400W 12V</strong></span>
+                <span style="color:#f59e0b;font-weight:700;white-space:nowrap;margin-left:8px">Ver en Amazon ↗</span>
+              </a>
+              <a id="amz-mppt-link" href="https://www.amazon.com/s?k=Victron+SmartSolar+MPPT+charge+controller+12V+30A&tag=sebiglesias-20" target="_blank" rel="sponsored nofollow noopener" style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:8px;text-decoration:none;color:inherit;font-size:0.84rem">
+                <span>🎛️ <strong id="amz-mppt-label">Regulador Victron SmartSolar MPPT &amp; Inversor Onda Pura</strong></span>
+                <span style="color:#f59e0b;font-weight:700;white-space:nowrap;margin-left:8px">Ver en Amazon ↗</span>
+              </a>
+              <a id="amz-powerstation-link" href="https://www.amazon.com/s?k=EcoFlow+DELTA+2+portable+power+station+LiFePO4+solar+generator&tag=sebiglesias-20" target="_blank" rel="sponsored nofollow noopener" style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.35);border-radius:8px;text-decoration:none;color:inherit;font-size:0.84rem">
+                <span>⚡ <strong>Alternativa Sin Cablear: EcoFlow DELTA / Jackery Explorer</strong></span>
+                <span style="color:#10b981;font-weight:700;white-space:nowrap;margin-left:8px">Plug &amp; Play ↗</span>
+              </a>
+            </div>
+            <div style="font-size:0.68rem;opacity:0.65;margin-top:6px">
+              Como Afiliado de Amazon obtenemos ingresos por compras adscritas sin costo adicional para vos.
+            </div>
           </div>
         </section>
 
@@ -532,7 +585,39 @@
   </div>
 
   <!-- Footer -->
-  <footer>
+  
+<!-- EMBED_WIDGET_ENGINE -->
+<div id="embed-widget-generator" style="margin:1.8rem 0;padding:1rem;background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.18);border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:0.78rem">
+  <details>
+    <summary style="cursor:pointer;font-weight:700;color:#10B981;list-style:none;display:flex;align-items:center;justify-content:space-between">
+      <span>⚡ Incrustar esta Calculadora en tu Web (Embed)</span>
+      <span style="font-size:0.7rem;opacity:0.75">&lt;/&gt; HTML</span>
+    </summary>
+    <div style="margin-top:0.8rem">
+      <p style="margin-bottom:0.5rem;opacity:0.8;font-size:0.74rem">Copiá este código HTML para insertar la calculadora interactiva gratis en tu blog, estudio o tienda:</p>
+      <textarea id="embed-code-box-camper-solar" readonly rows="4" style="width:100%;background:#0F0E0B;color:#F2EFE6;border:1px solid rgba(255,255,255,0.18);border-radius:4px;padding:0.6rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;resize:none">&lt;iframe src="https://sebiglesias.com.ar/camper-solar/?embed=1" width="100%" height="680" style="border:1px solid rgba(150,150,150,0.25);border-radius:8px;overflow:hidden" loading="lazy"&gt;&lt;/iframe&gt;
+&lt;p style="font-size:12px;text-align:right;margin-top:4px;opacity:0.8"&gt;Powered by &lt;a href="https://sebiglesias.com.ar/camper-solar/" target="_blank" rel="noopener"&gt;RV & Vanlife 12V Solar & LiFePO4 Battery Calculator&lt;/a&gt;&lt;/p&gt;</textarea>
+      <button type="button" onclick="(function(btn){var el=document.getElementById('embed-code-box-camper-solar');navigator.clipboard.writeText(el.value);var old=btn.textContent;btn.textContent='✅ ¡Código copiado!';setTimeout(function(){btn.textContent=old;},2000);})(this)" style="margin-top:0.5rem;background:#10B981;color:#14130F;border:none;padding:0.45rem 0.9rem;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:0.74rem;font-weight:700;cursor:pointer">📋 Copiar Código Embed</button>
+    </div>
+  </details>
+</div>
+<script>
+(function(){
+  if (new URLSearchParams(window.location.search).get('embed') === '1') {
+    const hideSelectors = [
+      '.site-header', '.site-header-top', '.backlink-bar', 'header > .container.header-inner',
+      '.prose', '.seo-section', '.faq-section', '.family-nav', '.related-cluster',
+      '#embed-widget-generator', '.adsense-wrap', '.ad-slot-container'
+    ];
+    hideSelectors.forEach(sel => {
+      document.querySelectorAll(sel).forEach(el => { el.style.display = 'none'; });
+    });
+    document.body.style.paddingTop = '0.75rem';
+  }
+})();
+</script>
+
+<footer>
     <div class="container">
       <p>
         Calculadora Solar Camper & 12V · Por <a href="https://sebiglesias.com.ar" target="_blank" rel="noopener noreferrer">Sebastian Iglesias</a>

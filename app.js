@@ -278,6 +278,29 @@
     // Update Mobile Sticky Bar
     stickyDailyAh.textContent = `${data.dailyAh} Ah/día`;
     stickyBatteryAh.textContent = `${data.batteryAh} Ah`;
+
+    // Update Dynamic High-Ticket Amazon Associates Links
+    const amzBatLink = document.getElementById('amz-battery-link');
+    const amzBatLbl = document.getElementById('amz-battery-label');
+    if (amzBatLink && amzBatLbl) {
+      const targetAh = data.batteryAh >= 200 ? 200 : 100;
+      const chem = state.batteryType === 'lifepo4' ? 'LiFePO4+lithium' : 'AGM+deep+cycle';
+      amzBatLink.href = `https://www.amazon.com/s?k=12V+${targetAh}Ah+${chem}+battery+RV+camper&tag=sebiglesias-20`;
+      amzBatLbl.textContent = `Batería 12V ${data.batteryAh}Ah ${data.batteryTypeLabel} (LiTime / Renogy)`;
+    }
+    const amzSolLink = document.getElementById('amz-solar-link');
+    const amzSolLbl = document.getElementById('amz-solar-label');
+    if (amzSolLink && amzSolLbl) {
+      const targetW = data.solarWp >= 350 ? 400 : 200;
+      amzSolLink.href = `https://www.amazon.com/s?k=Renogy+${targetW}W+12V+monocrystalline+solar+panel+kit+RV&tag=sebiglesias-20`;
+      amzSolLbl.textContent = `Kit Solar ${data.solarWp}W Monocristalino 12V (${data.solarPanelsConfig})`;
+    }
+    const amzMpptLink = document.getElementById('amz-mppt-link');
+    const amzMpptLbl = document.getElementById('amz-mppt-label');
+    if (amzMpptLink && amzMpptLbl) {
+      amzMpptLink.href = `https://www.amazon.com/s?k=Victron+SmartSolar+MPPT+${data.mpptRating}A+12V+charge+controller+${data.inverterWatts}W+pure+sine+inverter&tag=sebiglesias-20`;
+      amzMpptLbl.textContent = `Regulador MPPT ${data.mpptRating}A + Inversor Onda Pura ${data.inverterWatts}W`;
+    }
   }
 
   // Share Technical Sheet
@@ -348,5 +371,49 @@ Calculado con: https://sebiglesias.com.ar/camper-solar/`;
     });
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  // Multilingual i18n Engine (?lang=es|en|de|fr|it|pt|nl|sv|da|pl)
+  const I18N_SOLAR = {
+    es: { title: 'Calculadora Solar Camper <span class="brand-badge">12V / 24V</span>', loads: '⚡ Consumos Eléctricos Diarios', specs: '📋 Ficha Técnica Recomendada' },
+    en: { title: 'RV & Vanlife Solar Calculator <span class="brand-badge">12V / LiFePO4</span>', loads: '⚡ Daily 12V & AC Power Loads', specs: '📋 Recommended Solar & Battery Sizing' },
+    de: { title: 'Wohnmobil Solaranlage Rechner <span class="brand-badge">12V / LiFePO4</span>', loads: '⚡ Täglicher Stromverbrauch im Camper', specs: '📋 Empfohlene Batterie- & Solar-Dimensionierung' },
+    fr: { title: 'Calculateur Solaire Camping-Car <span class="brand-badge">12V / LiFePO4</span>', loads: '⚡ Consommation Électrique Quotidienne', specs: '📋 Dimensionnement Batterie & Panneaux Solaires' },
+    it: { title: 'Calcolatore Impianto Solare Camper <span class="brand-badge">12V / Litio</span>', loads: '⚡ Consumi Elettrici Giornalieri 12V', specs: '📋 Dimensionamento Batteria LiFePO4 e Pannelli' },
+    pt: { title: 'Calculadora Solar Motorhome & Van <span class="brand-badge">12V / Lítio</span>', loads: '⚡ Consumo Elétrico Diário 12V', specs: '📋 Dimensionamento de Bateria e Painéis Solares' },
+    nl: { title: 'Camper Zonnepanelen & Accu Calculator <span class="brand-badge">12V / LiFePO4</span>', loads: '⚡ Dagelijks Stroomverbruik in Camper', specs: '📋 Aanbevolen LiFePO4 Accu & MPPT Advies' },
+    sv: { title: 'Solcellskalkylator Husbil & Camper <span class="brand-badge">12V / LiFePO4</span>', loads: '⚡ Daglig Elförbrukning 12V', specs: '📋 Rekommenderad Batteribank & Solpaneler' },
+    da: { title: 'Autocamper Solcelle & Batteri Beregner <span class="brand-badge">12V</span>', loads: '⚡ Dagligt Strømforbrug i Camper', specs: '📋 Anbefalet LiFePO4 Batteri & Solceller' },
+    pl: { title: 'Kalkulator Solarny Kampera 12V <span class="brand-badge">LiFePO4</span>', loads: '⚡ Dzienne Zużycie Prądu w Kamperze', specs: '📋 Dobór Akumulatora LiFePO4 i Paneli' }
+  };
+
+  function setupI18n() {
+    const sel = document.getElementById('lang-select');
+    const titleEl = document.querySelector('.brand-title');
+    const loadsEl = document.getElementById('loadsTitle');
+    const specsEl = document.getElementById('specsTitle');
+    function apply(lang) {
+      const d = I18N_SOLAR[lang] || I18N_SOLAR.es;
+      document.documentElement.lang = lang;
+      if (titleEl) titleEl.innerHTML = d.title;
+      if (loadsEl) loadsEl.textContent = d.loads;
+      if (specsEl) specsEl.textContent = d.specs;
+    }
+    const params = new URLSearchParams(window.location.search);
+    const initLang = params.get('lang') || localStorage.getItem('camper-lang') || 'es';
+    const valid = I18N_SOLAR[initLang] ? initLang : 'es';
+    if (sel) {
+      sel.value = valid;
+      sel.addEventListener('change', (e) => {
+        const nl = e.target.value;
+        localStorage.setItem('camper-lang', nl);
+        const u = new URL(window.location.href);
+        if (nl === 'es') u.searchParams.delete('lang');
+        else u.searchParams.set('lang', nl);
+        window.history.replaceState({}, '', u);
+        apply(nl);
+      });
+    }
+    apply(valid);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => { init(); setupI18n(); });
 })();
